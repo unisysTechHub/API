@@ -24,23 +24,7 @@ class TransfersUsecase {
         //   accountList.accountList?.forEach( ){ account: Account -> Log.d("@Ramesh list", account.accountNumber.toString())  }
         val result: Result = Result.Success(data = filteredData(accountList.accountList!!))
         emit(result)
-        //val result : Result = Result.Success(data = listOf(AccountModel(accountNumber = "23232", accountType = "Checking", bankName = "ABC Bank")))
-//        when (result) {
-//            is Result.Error -> emit(result)
-//            is Result.Success<*> -> {
-//                val accountNumber: String =
-//                    (result as Result.Success<List<Account>>).data[0].accountNumber!!
-//                Log.d(
-//                    "@Ramesh ",
-//                    (result as Result.Success<List<Account>>).data[0].usBankAccount?.bankName!!
-//                )
-//                Log.d(
-//                    "@Ramesh ",
-//                    (result as Result.Success<List<Account>>).data[0].usBankAccount?.accountType!!
-//                )
-//                emit(result)
-//            }
-       // }
+
     }
      fun<T> getAccounts(callback: Callback<T>): Unit  {
         //  val result: Result = transfersRepo.accounts()
